@@ -3,129 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.google.com/specimen/Poppins" rel="stylesheet">
     <title>Juls Aesthetics By Julia</title>
+    <link rel="icon" type="image/x-icon" href="/images/ju.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fffbfc;
             margin: 0;
             padding: 0;
-            background-color: #fff7fa;
-            color: #4A0E2E;
         }
-        .container {
+
+        table {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            border-collapse: collapse;
         }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
         header {
-            background-color: #ffd6e7;
-            padding: 20px 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+
         .logo {
-            width: 100px;
+            width: 80px;
             height: auto;
         }
+
         nav ul {
             list-style-type: none;
             padding: 0;
-            display: flex;
-            gap: 20px;
         }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
         nav ul li a {
-            color: #8B0046;
+            color: #333;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
         }
-        h1 {
-            margin: 0;
-            color: #8B0046;
+
+        h1, h2 {
+            color: #ff9cd4;
         }
-        main {
-            padding: 40px 0;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #C71585;
-        }
+
         .welcome-text {
-            font-size: 2em;
-            font-weight: bold;
-            color: #FF1493;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: 700;
+
         }
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+
+        .welcome-block {
+            padding-right: 100px;
         }
-        .flex-item {
-            flex: 1;
-            min-width: 300px;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-        }
-        .service-item {
-            background-color: #ffe7ea;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .testimonial {
-            background-color: #FFC0CB;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .testimonial p:first-child {
-            font-style: italic;
-            font-weight: bold;
-        }
-        .contact-info {
-            background-color: #FFC0CB;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #FFB6C1;
-            color: #8B0046;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
+
         .button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background-color: #FF69B4;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            margin-right: 10px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-right: 15px;
         }
-        .button:hover {
-            background-color: #FF1493;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+
         .slider {
             width: 400px;
             height: 400px;
-            position: relative;
+            position: absolute;
             overflow: hidden;
-            border-radius: 50%;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
+
         .slider img {
             position: absolute;
             top: 0;
@@ -133,113 +95,170 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slider img.active {
+            opacity: 1;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial {
+            background-color: white;
+            padding:20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial p:first-child {
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #FF69B4;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="images/julialogo.png" alt="Juls Aesthetics Logo" class="logo">
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <table>
+        <tr>
+            <td colspan="2">
+                <header>
+                    <table>
+                        <tr>
+                            <td><img src="images/julialogo.png" alt="Juls Aesthetics Logo" class="logo"></td>
+                            <td>
+                                <nav>
+                                    <ul>
+                                        <li><a href="#home">Home</a></li>
+                                        <li><a href="#services">Services</a></li>
+                                        <li><a href="#about">About</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </td>
+                        </tr>
+                    </table>
+                </header>
+            </td>
+        </tr>
+        <tr id="home">
+            <td>
+                <div class="slider">
+                    <img src="slider1.jpg" alt="Salon Image 1" class="active">
+                    <img src="slider2.jpg" alt="Salon Image 2">
+                    <img src="slider3.jpg" alt="Salon Image 3">
+                </div>
+            </td>
+            <td class = "welcome-block">
+                <h1 class="welcome-text">Welcome to Juls Aesthetics By Julia!</h1>
+                <p>My name is Julia, and I am a certified aesthetician and nail tech working out of NEWWay Aesthetics/Lash Fairies Salon in the heart of London, Ontario. I have two years of experience in the aesthetics industry and am excited to share that I am expanding into facials and spray tans.</p>
+                <a href="favorite_products.html" class="button">Jul's Product Picks</a>
+                <a href="services.html" class="button">View Services</a>
+            </td>
+        </tr>
+        <tr id="about">
+            <td colspan="2">
+                <h2>My Story</h2>
+                <p>As a newcomer to the salon scene, I bring fresh ideas and a commitment to excellence. I studied at Elegance Schools in London, Ontario. I started out doing nails and have recently expanded to facials and spray tans. I am thrilled to be apprenticing as a skin therapist with Erika at NEWWay Aesthetics.</p>
+            </td>
+        </tr>
+        <tr id="services">
+            <td>
+                <h2>My Passion</h2>
+                <p><a href="services.html#services"><strong>Nails, nails, nails!</strong></a> You nailed it - my passion is your nails. I love coming up with new designs for your fingertips! But wait... expanding into facials and helping clients achieve the results they are looking for with their skin has made me even more excited about the field of medical aesthetics. I think I am going to love giving you healthy, glowing skin just as much as I love making your nails pop!</p>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td class="service-item">Nails</td>
+                        <td class="service-item">Facials</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Spray Tans</td>
+                        <td class="service-item">Skin Care</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>Testimonials</h2>
+                <table>
+                    <tr>
+                        <td class="testimonial">
+                            <p>"I had such a great first time experience with the facial! It was soothing, relaxing and an awesome experience! My face feels lovely. My nails are beautiful. A great afternoon pampering with Julia!!"</p>
+                            <p>- DanAlisah M.</p>
+                        </td>
+                        <td class="testimonial">
+                            <p>"The most talented nail techs in the salon now as well! If you're in London and wanting to visit pls look into them and their pricing is so good!"</p>
+                            <p>- Hayley T.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="testimonial">
+                            <p>"julsaesthetics also slayed my nails as always."</p>
+                            <p>- Erika T.</p>
+                        </td>
+                        <td class="testimonial">
+                            <p>"My mom is always amazed by the intricate nail designs I get at Julia's salon. We both think Julia is incredible!"</p>
+                            <p>- Katie C.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr id="contact">
+            <td colspan="2">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <p>Email: julia@julsaesthetics.com</p>
+                    <p>Address: NEWWay Aesthetics/Lash Fairies Salon, London, Ontario</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <footer>
+                    <p>&copy; 2025 Juls Aesthetics By Julia. All rights reserved.</p>
+                </footer>
+            </td>
+        </tr>
+    </table>
 
-    <main class="container">
-        <section id="home">
-            <div class="flex-container">
-                <div class="flex-item">
-                    <div class="slider">
-                        <img src="slider1.jpg" alt="Salon Image 1">
-                        <img src="slider2.jpg" alt="Salon Image 2">
-                        <img src="slider3.jpg" alt="Salon Image 3">
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <h2 class="welcome-text">Welcome to Juls Aesthetics By Julia!</h2>
-                    <p>My name is Julia, and I am a certified aesthetician and nail tech working out of NEWWay Aesthetics/Lash Fairies Salon in the heart of London, Ontario. I have two years of experience in the aesthetics industry and am excited to share that I am expanding into facials and spray tans.</p>
-                    <a href="#" class="button">Book Now</a>
-                    <a href="#" class="button">View Services</a>
-                </div>
-            </div>
-        </section>
+    <script>
+        // Simple image slider
+        const sliderImages = document.querySelectorAll('.slider img');
+        let currentImage = 0;
 
-        <section id="about">
-            <h2>My Story</h2>
-            <p>As a newcomer to the salon scene, I bring fresh ideas and a commitment to excellence. I studied at Elegance Schools in London, Ontario. I started out doing nails and have recently expanded to facials and spray tans. I am thrilled to be apprenticing as a skin therapist with Erika at NEWWay Aesthetics.</p>
-        </section>
+        function changeImage() {
+            sliderImages[currentImage].classList.remove('active');
+            currentImage = (currentImage + 1) % sliderImages.length;
+            sliderImages[currentImage].classList.add('active');
+        }
 
-        <section>
-            <h2>My Passion</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <p><a href="services.html#nails-services-descriptions"><strong>Nails, nails, nails!</strong></a> You nailed it - my passion is your nails. I love coming up with new designs for your fingertips! But wait... expanding into facials and helping clients achieve the results they are looking for with their skin has made me even more excited about the field of medical aesthetics. I think I am going to love giving you healthy, glowing skin just as much as I love making your nails pop!</p>
-                </div>
-                <div class="flex-item">
-                    <div class="services-grid">
-                        <div class="service-item">Nails</div>
-                        <div class="service-item">Facials</div>
-                        <div class="service-item">Spray Tans</div>
-                        <div class="service-item">Skin Care</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Testimonials</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <div class="testimonial">
-                        <p>"I had such a great first time experience with the facial! It was soothing, relaxing and an awesome experience! My face feels lovely. My nails are beautiful. A great afternoon pampering with Julia!!"</p>
-                        <p>- DanAlisah M.</p>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <div class="testimonial">
-                        <p>"The most talented nail techs in the salon now as well! If you're in London and wanting to visit pls look into them and their pricing is so good!"</p>
-                        <p>- Hayley T.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <div class="testimonial">
-                        <p>"julsaesthetics also slayed my nails as always."</p>
-                        <p>- Erika T.</p>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <div class="testimonial">
-                        <p>"My mom is always amazed by the intricate nail designs I get at Julia's salon. We both think Julia is incredible!"</p>
-                        <p>- Katie C.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p>Phone: +1 (123) 456-7890</p>
-                <p>Email: julia@julsaesthetics.com</p>
-                <p>Address: NEWWay Aesthetics/Lash Fairies Salon, London, Ontario</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Juls Aesthetics By Julia. All rights reserved.</p>
-        </div>
-    </footer>
+        setInterval(changeImage, 5000); // Change image every 5 seconds
+    </script>
 </body>
 </html>
