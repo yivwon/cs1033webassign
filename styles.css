@@ -80,9 +80,10 @@ a.references {
     width: 400px;
     height: 400px;
     position: absolute;
+    left: 180px;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 .slider img {
