@@ -15,7 +15,7 @@ table {
 }
 
 td {
-    padding: 10px;
+    padding: 20px;
     vertical-align: top;
 }
 
@@ -62,9 +62,13 @@ a.references {
 }
 
 .welcome-block {
-    padding-right: 100px;
+    padding-right: 130px;
 }
 
+/* */
+.mystoryheading { 
+    padding-top: 30px;
+}
 .button {
     display: inline-block;
     padding: 12px 24px;
@@ -80,10 +84,10 @@ a.references {
     width: 400px;
     height: 400px;
     position: absolute;
-    left: 180px;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    margin-left: 60px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .slider img {
