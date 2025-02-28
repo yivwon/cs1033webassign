@@ -65,10 +65,10 @@ a.references {
     padding-right: 130px;
 }
 
-/* */
 .mystoryheading { 
     padding-top: 30px;
 }
+
 .button {
     display: inline-block;
     padding: 12px 24px;
@@ -105,10 +105,19 @@ a.references {
     opacity: 1;
 }
 
+.services-table {
+    width: 200px;
+    float: right; /* Moves it to the right */
+    border-spacing: 15px;
+    border-collapse: separate;
+}
+
 .service-item {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+    width: 100px;
+    height: 100px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -116,15 +125,23 @@ a.references {
 .testimonial {
     background-color: white;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 10px; /* This applies rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px; /* Adds space between testimonials */
+    text-align: center; /* Centers text */
 }
 
+.testimonials {
+    border-spacing: 30px; /* Correct way to add spacing between cells */
+    border-radius: 15px; /* Ensures rounded corners */
+    overflow: hidden;
+    border-collapse: separate; /* Ensures border-radius works */
+    padding: 10px;
+}
 
-.testimonial p:first-child {
+.testimonial-heading {
+    font-weight: 550;
     font-style: italic;
-    font-weight: 600;
 }
 
 .contact-info {
@@ -173,3 +190,4 @@ footer {
     height: 100%;
     object-fit: cover; /* Ensures the image covers the area while cropping */
 }
+
