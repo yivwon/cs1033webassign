@@ -6,17 +6,16 @@
     <link rel="stylesheet" href="styles.css">
     <title>Home | Juls Aesthetics</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <body id="top">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="top">
     <table>
         <tr>
             <td colspan="2">
                 <header>
                     <table>
                         <tr>
-                            <img src="images/Banner.jpg" alt="Juls Aesthetics Banner" class="banner active hover">
+                            <img src="images/Banner.jpg" alt="Juls Aesthetics Banner" class="banner hover">
                             <td>
                                 <nav class="main-nav">
                                     <ul>
@@ -35,14 +34,44 @@
         </tr>
         <tr id="home">
             <td>
-                <table class="slider">
-                    <tr>
-                        <td><img src="images/nails5.jpg" alt="Salon Image 1" class="active hover"></td>
-                        <td><img src="images/nails10.jpg" alt="Salon Image 2" class="active hover"></td>
-                        <td><img src="images/nails11.jpg" alt="Salon Image 3" class="active hover"></td>
-                    </tr>
-                </table>
+                <div class="gallery-container">
+                    <!-- Main image display area -->
+                    <div class="gallery-main">
+                        <!-- Each image is in its own container with an ID -->
+                        <div id="img1" class="gallery-image active">
+                            <img src="images/nails5.jpg" alt="Nail Design 1" class="hover">
+                        </div>
+                        <div id="img2" class="gallery-image">
+                            <img src="images/nails10.jpg" alt="Nail Design 2" class="hover">
+                        </div>
+                        <div id="img3" class="gallery-image">
+                            <img src="images/nails11.jpg" alt="Nail Design 3" class="hover">
+                        </div>
+                    </div>
+                    
+                    <!-- Thumbnail navigation -->
+                    <div class="gallery-thumbs">
+                        <a href="#img1" class="thumb-link active">
+                            <img src="images/nails5.jpg" alt="Nail Design 1" class="thumb-img">
+                        </a>
+                        <a href="#img2" class="thumb-link">
+                            <img src="images/nails10.jpg" alt="Nail Design 2" class="thumb-img">
+                        </a>
+                        <a href="#img3" class="thumb-link">
+                            <img src="images/nails11.jpg" alt="Nail Design 3" class="thumb-img">
+                        </a>
+                    </div>
+                </div>
             </td>
+            <td class="welcome-block">
+                <h1 class="welcome-text">Welcome to Juls Aesthetics By Julia!</h1>
+                <p>My name is Julia, and I am a certified aesthetician and nail tech working out of NEWWay Aesthetics/Lash Fairies Salon in the heart of London, Ontario. I have two years of experience in the aesthetics industry and am excited to share that I am expanding into facials and spray tans.</p>
+                <a href="favorite_products.html" class="button" target="_blank">Jul's Product Picks</a>
+                <a href="services.html" class="button" target="_blank">View Services</a>
+            </td>
+        </tr>
+        
+        <!-- Rest of the HTML remains unchanged -->
             <td class="welcome-block">
                 <h1 class="welcome-text">Welcome to Juls Aesthetics By Julia!</h1>
                 <p>My name is Julia, and I am a certified aesthetician and nail tech working out of NEWWay Aesthetics/Lash Fairies Salon in the heart of London, Ontario. I have two years of experience in the aesthetics industry and am excited to share that I am expanding into facials and spray tans.</p>
@@ -140,19 +169,6 @@
             </td>
         </tr>
     </table>
-
-    <script>
-        // Simple image slider
-        const sliderImages = document.querySelectorAll('.slider img');
-        let currentImage = 0;
-
-        function changeImage() {
-            sliderImages[currentImage].classList.remove('active');
-            currentImage = (currentImage + 1) % sliderImages.length;
-            sliderImages[currentImage].classList.add('active');
-        }
-
-        setInterval(changeImage, 2000); // Change image every 2 seconds
-    </script>
-</body>
-</html>
+   </body>
+   </html>
+    
