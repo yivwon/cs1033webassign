@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body id="top">
-    <table>
+    <table style="width: 1000px;">
         <tr>
             <td colspan="2">
                 <header>
-                    <table>
+                    <table style="width: 1000px;">
                         <tr>
                             <img src="images/Banner.jpg" alt="Juls Aesthetics Banner" class="banner hover">
                             <td>
@@ -70,15 +70,7 @@
                 <a href="services.html" class="button" target="_blank">View Services</a>
             </td>
         </tr>
-        
-        <!-- Rest of the HTML remains unchanged -->
-            <td class="welcome-block">
-                <h1 class="welcome-text">Welcome to Juls Aesthetics By Julia!</h1>
-                <p>My name is Julia, and I am a certified aesthetician and nail tech working out of NEWWay Aesthetics/Lash Fairies Salon in the heart of London, Ontario. I have two years of experience in the aesthetics industry and am excited to share that I am expanding into facials and spray tans.</p>
-                <a href="favorite_products.html" class="button" target="_blank">Jul's Product Picks</a>
-                <a href="services.html" class="button" target="_blank">View Services</a>
-            </td>
-        </tr>
+
         <tr id="about">
             <td colspan="2">
                 <h2 class="mystoryheading">My Story</h2>
@@ -99,7 +91,7 @@
         <tr>
             <td colspan="2">
                 <h2>Testimonials</h2>
-                <table class="testimonials" width: 1000px;>
+                <table class="testimonials" style="width: 1000px;">
                     <tbody>
                         <tr style="height: 144.977px;">
                             <td class="testimonial" style="width: 165.5px; height: 144.977px;">
@@ -125,24 +117,25 @@
                 </table>                
             </td>
         </tr>
+
         <tr id="contact">
-            <td colspan="2">
+            <td colspan="5">
                 <h2>Contact Us</h2>
-                <table style="width: 100%; background-color: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); padding: 10px; border-collapse: separate; border-spacing: 3px;">
+                <table class="contact-info">
                     <tr>
-                        <td>
-                            <table style="width: 100%; border-collapse: collapse;">
+                        <td class="td-contact"> <!-- Apply the class here -->
+                            <table>
                                 <tr>
-                                    <th style="text-align: left; padding: 10px;">Phone</th>
-                                    <td style="text-align: left; padding: 10px;">+1 (123) 456-7890</td>
+                                    <th class="td-contact"><span>Phone</span></th>
+                                    <td class="td-contact"><span>+1 (123) 456-7890</span></td> <!-- Apply the class here -->
                                 </tr>
                                 <tr>
-                                    <th style="text-align: left; padding: 10px;">Email</th>
-                                    <td style="text-align: left; padding: 10px;">julia@julsaesthetics.com</td>
+                                    <th class="td-contact"><span>Email</span></th>
+                                    <td class="td-contact"><span>julia@julsaesthetics.com</td> <!-- Apply the class here -->
                                 </tr>
                                 <tr>
-                                    <th style="text-align: left; padding: 10px;">Address</th>
-                                    <td style="text-align: left; padding: 10px;">NEWWay Aesthetics/Lash Fairies Salon, London, Ontario</td>
+                                    <th class="td-contact"><span>Address</span></th>
+                                    <td class="td-contact"><span>NEWWay Aesthetics/Lash Fairies Salon, London, Ontario</span></td> <!-- Apply the class here -->
                                 </tr>
                             </table>
                         </td>
