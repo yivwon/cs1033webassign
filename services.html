@@ -8,21 +8,20 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Additional styles specific to the services page */
         .service-table {
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             margin-bottom: 30px;
-            width: 100%;
+            width: 1000px;
             border-collapse: separate;
             border-spacing: 0;
             overflow: hidden;
         }
         
-        .service-cell {
-            padding: 25px;
-        }
+        /* .service-cell {
+             padding: 25px; */
+        
         
         .service-table h2 {
             margin-top: 0;
@@ -69,28 +68,42 @@
         
         /* Simple nail gallery styling */
         .nail-gallery {
-            width: 100%;
+            width: 980px;
+            margin: 0 auto; /* Centers the gallery */
             border-collapse: separate;
-            /* border-spacing: 15px; */
+            position: relative;
+            left: -11px;
         }
         
         .nail-image {
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 230px;
             border-radius: 10px;
             padding-bottom: 65px;
-            overflow: hidden;
+            /* overflow: hidden; */
+            position: relative;
+            background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
+        table.nail-gallery {
+    padding: 0 !important;
+    margin: 0 auto !important; /* Centers within 1000px width */
+    border-spacing: 0;
+}
+td.nail-image {
+    padding: 5px; /* Reduce padding */
+}
         
         .nail-image:hover {
             transform: scale(1.05);
         }
         
         .nail-image img {
-            width: 100%;
-            height: 100%;
+            width: 200px;
+            height: 280px;
+            position: relative;
+            left: 20px;
             object-fit: cover;
         }
         
@@ -98,6 +111,7 @@
             text-align: center;
             margin-top: 6px;
             font-size: 20px;
+            object-fit: cover;
             font-weight: 500;
             color: #dc70ad;
         }
@@ -128,6 +142,7 @@
             margin-bottom: 30px;
             text-align: center;
         }
+
     </style>
 </head>
 <body id="top">
@@ -136,11 +151,7 @@
             <td colspan="2">
                 <header>
                     <table>
-                        <tr>
-                            <td>
-                                <img src="images/Banner.jpg" alt="Juls Aesthetics Banner" class="banner active hover">
-                            </td>
-                        </tr>
+                        <img src="images/Banner.jpg" alt="Juls Aesthetics Banner" title="Juls Aesthetics Banner" class="banner active hover">
                         <tr>
                             <td>
                                 <nav class="main-nav">
@@ -246,22 +257,22 @@
                             <h2>Nail Gallery</h2>
                             <table width="100%">
                                 <tr>
-                                    <td style="display: flex; justify-content: center; align-items: center;">
-                                        <table class="nail-gallery">
+                                    <!-- <td style="display: flex; justify-content: center; align-items: center;"> -->
+                                        <table class="nail-gallery"  style="padding: 0 !important; margin: 0 !important;">
                                             <tr>
                                                 <td colspan="2">
-                                                    <table class="nail-gallery">
+                                                    <table class="nail-gallery"  style="padding: 0 !important; margin: 0 !important;">
                                                         <tbody>
                                                             <td class="nail-image">
-                                                                    <img src="images/frenchtips.jpg" class="active hover" alt="Elegant French Tips">
+                                                                    <img src="images/frenchtips.jpg" class="active hover" alt="Elegant French Tips" title="Elegant French Tips">
                                                                 <p class="nail-caption">🤍 Classic French Tips! 🤍</p>
                                                             </td>
                                                             <td class="nail-image">
-                                                                    <img src="images/nails4.jpg" class="active hover" alt="Abstract Design">
+                                                                    <img src="images/nails4.jpg" class="active hover" alt="Abstract Design" title="Abstract Design">
                                                                 <p class="nail-caption">🪩 Abstract Artistry! 🐆</p>
                                                             </td>
                                                             <td class="nail-image">
-                                                                    <img src="images/nails1.jpg" class="active hover" alt="Glittery Ombre">
+                                                                    <img src="images/nails1.jpg" class="active hover" alt="Glittery Ombre" title="Glittery Ombre">
                                                                 <p class="nail-caption">❄️ Sparkle and Shine! 💎</p>
                                                             </td>
                                                         </tbody>
@@ -269,7 +280,7 @@
                                                 </td>
                                             </tr>        
                                         </table>
-                                    </td>
+                                    <!-- </td> -->
                                 </tr>
                             </table>
                         </td>
