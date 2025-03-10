@@ -8,12 +8,34 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fffbfc;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 1000px !important;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td span {
+    padding: 20px;
+    vertical-align: top;
+    width: 960px !important;
+    max-width:960px !important; 
+}
         .service-table {
             background-color: white;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             margin-bottom: 30px;
-            width: 1000px;
+            width: 960px;
             border-collapse: separate;
             border-spacing: 0;
             overflow: hidden;
@@ -72,7 +94,7 @@
             margin: 0 auto; /* Centers the gallery */
             border-collapse: separate;
             position: relative;
-            left: -11px;
+            left: -19px;
         }
         
         .nail-image {
@@ -103,7 +125,7 @@ td.nail-image {
             width: 200px;
             height: 280px;
             position: relative;
-            left: 20px;
+            left: 50px;
             object-fit: cover;
         }
         
@@ -146,13 +168,13 @@ td.nail-image {
     </style>
 </head>
 <body id="top">
-    <table>
+    <table style="width: 1000px;">
         <tr>
             <td colspan="2">
                 <header>
-                    <table>
-                        <img src="images/Banner.jpg" alt="Juls Aesthetics Banner" title="Juls Aesthetics Banner" class="banner active hover">
+                    <table style="width: 1000px;">
                         <tr>
+                            <img src="images/Banner.jpg" alt="Juls Aesthetics Banner" title="Juls Aesthetics Banner" class="banner hover">
                             <td>
                                 <nav class="main-nav">
                                     <ul>
@@ -251,6 +273,7 @@ td.nail-image {
         
         <tr>
             <td colspan="2">
+                
                 <table class="service-table">
                     <tr>
                         <td class="service-cell">
@@ -289,29 +312,29 @@ td.nail-image {
             </td>
         </tr>
         
-        <tr>
-            <td colspan="2">
-                <table class="service-table">
-                    <tr>
-                        <td class="service-cell">
-                            <h2>Spray Tan Services</h2>
-                            <h3 class="service-title">Full Body Spray Tan</h3>
-                            <p class="service-description">Our full body spray tan service provides a natural-looking, sun-kissed glow without the harmful effects of UV rays. The tanning solution is customized to your skin tone and desired level of darkness.</p>
-                            
-                            <h3 class="service-title">Partial Body Spray Tan</h3>
-                            <p class="service-description">For those who want to focus on specific areas, we offer partial body spray tans. This service is perfect for touching up your tan or for events where only certain parts of your body will be exposed.</p>
-                            
-                            <h3 class="service-title">Spray Tan Preparation and Aftercare</h3>
-                            <p class="service-description">To ensure the best results from your spray tan, we provide detailed instructions on how to prepare for your appointment and how to care for your tan afterwards. This includes exfoliation tips, product recommendations, and advice on how to make your tan last longer.</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <tr>
+                <td colspan="2">
+                    <table class="service-table" style="left: 17px; position: relative;">
+                        <tr>
+                            <td class="service-cell">
+                                <h2>Spray Tan Services</h2>
+                                <h3 class="service-title">Full Body Spray Tan</h3>
+                                <p class="service-description">Our full body spray tan service provides a natural-looking, sun-kissed glow without the harmful effects of UV rays. The tanning solution is customized to your skin tone and desired level of darkness.</p>
+                                
+                                <h3 class="service-title">Partial Body Spray Tan</h3>
+                                <p class="service-description">For those who want to focus on specific areas, we offer partial body spray tans. This service is perfect for touching up your tan or for events where only certain parts of your body will be exposed.</p>
+                                
+                                <h3 class="service-title">Spray Tan Preparation and Aftercare</h3>
+                                <p class="service-description">To ensure the best results from your spray tan, we provide detailed instructions on how to prepare for your appointment and how to care for your tan afterwards. This includes exfoliation tips, product recommendations, and advice on how to make your tan last longer.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
         
         <tr>
             <td colspan="2">
-                <table class="service-table">
+                <table class="service-table" style="left: 17px; position: relative;">
                     <tr>
                         <td class="service-cell">
                             <h2>Facial Services</h2>
@@ -346,14 +369,13 @@ td.nail-image {
                 </table>
             </td>
         </tr>
-        
         <tr>
             <td colspan="2">
-                <footer>
+                <footer style="left: 20px; position: relative;">
                     <p>&copy; 2025 Juls Aesthetics By Julia. All rights reserved.</p>
                 </footer>
             </td>
         </tr>
-    </table>
-</body>
+</table>
+        </body>
 </html>

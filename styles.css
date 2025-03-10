@@ -9,7 +9,7 @@ body {
 
 table {
     width: 1000px !important;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     border-collapse: collapse;
 }
@@ -22,8 +22,10 @@ td {
     padding: 20px;
     vertical-align: top;
     width: 1000px !important;
-    max-width: 1000px !important;
+    box-sizing: border-box;
+    max-width: 1000px !important; 
 }
+
 .td-contact {
     padding: 0px; 
     position: relative;
@@ -34,6 +36,7 @@ td {
     display: inline-block;
     /* padding: 15px 0px;  */
     padding: 20px 0px;
+    text-indent: 30px;
 }
 
 
@@ -74,6 +77,13 @@ a.references {
     color: #dc70ad;
 }
 
+footer {
+    background-color: #FF69B4;
+    color: white;
+    width: 100%; /* Ensures it spans the full width */
+    text-align: center;
+    padding: 20px 0;
+}
 
 .welcome-text {
     font-size: 2.5em;
@@ -82,8 +92,10 @@ a.references {
 }
 
 .welcome-block {
-    padding-right: 130px;
+    padding-right: -71px;
     width: 1000px !important;
+    position: relative;
+    top: -50px;
 }
 
 .mystoryheading { 
@@ -314,7 +326,7 @@ footer {
 /* Gallery styling */
 .gallery-container {
     width: 400px;
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 .gallery-main {
@@ -411,3 +423,14 @@ footer {
     max-width: 1000px;
 }
 
+
+.home-image {
+    width: 400px; /* Set width */
+    height: 400px; /* Set height to ensure it's a square */
+    object-fit: cover; /* Ensures the image fills the square while cropping excess */
+    border-radius: 15px; /* Adjust for rounded corners */
+    /* display: block; Ensures no extra spacing */
+    left: 50px;
+    top: 30px;
+    vertical-align: bottom;
+}
